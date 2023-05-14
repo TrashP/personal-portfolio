@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    margin: 0;
+    background-color: rgb(247, 240, 241);
+    width: 100%;
+    height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (min-width: 1000px) {
+    #A-background {
+        font-size: 750px;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+#header-logo {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: rgb(77, 76, 76);
+    color: white;
+    padding: 5px;
+    position: fixed;
+    width: 100vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#logo {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+#dark-mode {
+    margin-right: 10px;
+}
+
+#logo, #dark-mode {
+    cursor: pointer;
+}
+
+#header-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+#header-name {
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+#A-background {
+    font-size: 75vw;
+    color: rgb(199, 195, 195);
+    position: absolute;
+    top: -50px;
+    z-index: -1;
+}
+
+@media screen and (min-width: 1000px) {
+    #A-background {
+        font-size: 750px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #A-background {
+        top: -20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #A-background {
+        top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #A-background {
+        top: 30px;
+    }
+}
+
+#first-name, #last-name {
+    font-size: 10vw;
+    font-weight: 200;
+    margin: 0;
+    position: relative;
+    left: -50px;
+}
+
+#last-name {
+    left: -30px;
+}
+
+@media screen and (min-width: 1000px) {
+    #first-name, #last-name {
+        font-size: 100px;
+    }
+}
+
+#job-first, #job-last {
+    font-size: 8vw;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    left: 20px;
+}
+
+#job-last {
+    left: 50px;
+}
+
+@media screen and (min-width: 1000px) {
+    #job-first, #job-last {
+        font-size: 80px;
+    }
+}
+
+#header-line {
+    width: 600px;
+    border-bottom: 1px solid black;
+    margin-top: 100px;
 }
