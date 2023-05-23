@@ -59,6 +59,17 @@ Header {
     margin-bottom: 30px;
 }
 
+#first-name, #last-name, #job-first, #job-last {
+    font-family: 'Times New Roman', serif;
+    animation: 5s fadeIn ease-out;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 #A-background {
     font-size: 75vw;
     color: rgb(199, 195, 195);
