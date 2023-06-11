@@ -8,6 +8,8 @@ import webpackIcon from '../images/webpack.png';
 import sassIcon from '../images/sass.png';
 import gitIcon from '../images/git.png';
 import jestIcon from '../images/jest.png';
+import pokemonMemory from '../images/pokemon-memory';
+import toDoList from '../images/to-do-list';
 
 const Content = () => {
 	return (
@@ -116,6 +118,56 @@ const Content = () => {
 				</div>
 			</span>
 			<div id="about-line"></div>
+			<div id="projects">
+				<h2>Projects</h2>
+				<Projects
+					imgSrc={pokemonMemory}
+					imgAlt="Pokemon Memory Game"
+					imgId="pokemon-memory"
+					desc="A game created using ReactJS functional components and
+					hooks. The objective of the game is to click on each
+					image without clicking on the same image twice. The
+					current score and best score of player is displayed on
+					screen as the game is played."
+					siteHref="https://trashp.github.io/pokemon-memory-game/"
+					ghHref="https://github.com/TrashP/pokemon-memory-game.git"
+				/>
+				<Projects
+					imgSrc={toDoList}
+					imgAlt="To Do List"
+					imgId="to-do-list"
+					desc="A personal to-do list and planner created with vanilla
+					JavaScript, HTML, and CSS. Users can add tasks with a
+					due date and description. The tasks get added to
+					separate tabs for the day and week. Projects can also be
+					created with their own list of tasks."
+					siteHref="https://trashp.github.io/toDoList/"
+					ghHref="https://github.com/TrashP/toDoList.git"
+				/>
+			</div>
+		</div>
+	);
+};
+
+const Projects = (props) => {
+	const { imgSrc, imgAlt, imgId, desc, siteHref, ghHref } = props;
+
+	return (
+		<div>
+			<img src={imgSrc} alt={imgAlt} id={imgId} />
+			<div className="wrapper">
+				<div className="title">{imgAlt}</div>
+				<div className="description">
+					<p>{desc}</p>
+					<div className="desc-line"></div>
+					<a href={siteHref} target="_blank" rel="noreferrer">
+						Live Site
+					</a>
+					<a href={ghHref} target="_blank" rel="noreferrer">
+						GitHub
+					</a>
+				</div>
+			</div>
 		</div>
 	);
 };

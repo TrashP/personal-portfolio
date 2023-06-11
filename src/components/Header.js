@@ -22,6 +22,11 @@ const Header = () => {
 								<a href="">Contact</a>
 							</span>
 						</li>
+						<li>
+							<span>
+								<a href="">Certifications</a>
+							</span>
+						</li>
 					</ul>
 				</nav>
 				<div id="dark-mode">T</div>
