@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import jsIcon from '../images/JS.png';
 import htmlIcon from '../images/html.png';
 import cssIcon from '../images/css.png';
@@ -10,8 +10,25 @@ import gitIcon from '../images/git.png';
 import jestIcon from '../images/jest.png';
 import pokemonMemory from '../images/pokemon-memory';
 import toDoList from '../images/to-do-list';
+import ticTacToe from '../images/tic-tac-toe';
 
 const Content = () => {
+	const handleScroll = () => {
+		document.body.style.setProperty(
+			'--scroll',
+			window.pageYOffset /
+				(document.body.offsetHeight - window.innerHeight)
+		);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, false);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 	return (
 		<div id="content">
 			<span id="about">
@@ -143,6 +160,18 @@ const Content = () => {
 					created with their own list of tasks."
 					siteHref="https://trashp.github.io/toDoList/"
 					ghHref="https://github.com/TrashP/toDoList.git"
+				/>
+				<Projects
+					imgSrc={ticTacToe}
+					imgAlt="Tic-Tac-Toe"
+					imgId="tic-tac-toe"
+					desc="A tic-tac-toe game implemented using vanilla JavaScript,
+					HTML, and CSS. The UI allows two players to play games
+					against each other and change their markers. The game
+					can be restarted using a button at the end of each
+					round."
+					siteHref="https://trashp.github.io/tic-tac-toe/"
+					ghHref="https://github.com/TrashP/tic-tac-toe.git"
 				/>
 			</div>
 		</div>

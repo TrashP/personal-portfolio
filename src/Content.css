@@ -114,9 +114,9 @@
     margin-top: 50px;
 }
 
-#pokemon-memory, #to-do-list {
+#pokemon-memory, #to-do-list, #tic-tac-toe {
     width: 65vw;
-    max-width: 700px;
+    max-width: 800px;
     object-fit: contain;
     border: 1px solid black;
     opacity: 0.5;
@@ -134,12 +134,18 @@
 
 .description {
     width: 60vw;
-    max-width: 600px;
+    max-width: 700px;
     border: 1px solid black;
     font-size: 20px;
     padding: 20px;
     background-color: #555;
     color: white;
+}
+
+@media screen and (min-width: 1100px) {
+    .description {
+        font-size: 24px;
+    }
 }
 
 .description p {
@@ -164,14 +170,21 @@
     margin-right: 20px;
 }
 
-.description a img {
-    width: 20px;
-}
-
 .wrapper {
     position: relative;
     bottom: 200px;
     left: 200px;
+    animation: slide 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes slide {
+    100% {
+        transform: translateY(-200px);
+    }
 }
 
 @media screen and (max-width: 800px) {
