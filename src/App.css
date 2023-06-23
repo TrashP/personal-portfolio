@@ -6,10 +6,12 @@ a {
 
 body {
     margin: 0;
+    margin-bottom: -20px;
     background-color: white;
     width: 100%;
     height: 100%;
     -ms-overflow-style: none;
+    overflow-x: hidden;
     scrollbar-width: none;
 }
 
