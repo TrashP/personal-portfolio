@@ -135,7 +135,7 @@ const Content = () => {
 				</div>
 			</span>
 			<div id="about-line"></div>
-			<div id="projects">
+			<span id="projects">
 				<h2>Projects</h2>
 				<Projects
 					imgSrc={pokemonMemory}
@@ -173,7 +173,28 @@ const Content = () => {
 					siteHref="https://trashp.github.io/tic-tac-toe/"
 					ghHref="https://github.com/TrashP/tic-tac-toe.git"
 				/>
-			</div>
+			</span>
+			<span id="certifications">
+				<h2>Certifications</h2>
+				<h3>freeCodeCamp Certifications</h3>
+				<Certification
+					certHref="https://freecodecamp.org/certification/TrashP/responsive-web-design"
+					certName="Responsive Web Design Certification"
+				/>
+				<Certification
+					certHref="https://freecodecamp.org/certification/TrashP/javascript-algorithms-and-data-structures"
+					certName="JavaScript Algorithms and Data Structures Certifications"
+				/>
+				<h3>cisco Certifications</h3>
+				<Certification
+					certHref="https://www.credly.com/badges/ff2a5d58-e478-4f55-a318-2fa3da1288c6/public_url"
+					certName="Networking Basics"
+				/>
+				<Certification
+					certHref="https://www.credly.com/badges/3cf01296-3ae3-4b08-92c0-6e57bfce6c48/public_url"
+					certName="Python Essentials I"
+				/>
+			</span>
 		</div>
 	);
 };
@@ -198,6 +219,17 @@ const Projects = (props) => {
 				</div>
 			</div>
 		</div>
+	);
+};
+
+const Certification = (props) => {
+	const { certHref, certName } = props;
+	return (
+		<a href={certHref} target="_blank" rel="noreferrer">
+			<div className="certDiv">
+				<h3 className="certName">{certName}</h3>
+			</div>
+		</a>
 	);
 };
 

@@ -4,6 +4,10 @@ a {
     font-size: 20px;
 }
 
+#logo img {
+    width: 40px;
+}
+
 body {
     margin: 0;
     margin-bottom: -20px;
@@ -36,6 +40,10 @@ Header {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+}
+
+.header-tabs a:hover {
+    color: rgb(245, 245, 95);
 }
 
 @media screen and (min-width: 1000px) {

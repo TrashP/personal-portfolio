@@ -1,35 +1,38 @@
 import React from 'react';
+import A from '../images/A.jpg';
 
 const Header = () => {
 	return (
 		<header>
 			<div id="header-logo">
-				<div id="logo">A</div>
+				<div id="logo">
+					<img src={A} alt="A" />
+				</div>
 				<nav>
 					<ul id="header-links">
 						<li>
-							<span>
-								<a href="">Home</a>
+							<span className="header-tabs">
+								<a href="#top">Home</a>
 							</span>
 						</li>
 						<li>
-							<span>
-								<a href="">Projects</a>
+							<span className="header-tabs">
+								<a href="#slide">Projects</a>
 							</span>
 						</li>
 						<li>
-							<span>
-								<a href="">Certifications</a>
+							<span className="header-tabs">
+								<a href="#tic-tac-toe">Certifications</a>
 							</span>
 						</li>
 						<li>
-							<span>
-								<a href="">Contact</a>
+							<span className="header-tabs">
+								<a href="#footer">Contact</a>
 							</span>
 						</li>
 					</ul>
 				</nav>
-				<div id="dark-mode">T</div>
+				<div id="dark-mode"></div>
 			</div>
 			<div id="header-name">
 				<div id="A-background">A</div>

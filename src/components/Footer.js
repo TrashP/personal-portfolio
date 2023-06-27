@@ -8,13 +8,22 @@ const Footer = () => {
 			<span id="footer-content">
 				<h1>Contact</h1>
 				<p>
-					I am looking for opportunities now. Feel free to contact me
-					if you have any questions and I'll get back to you!
+					I am looking for opportunities now. Feel free to check out
+					my GitHub profile and contact me on LinkedIn if you have any
+					questions and I'll get back to you!
 				</p>
-				<a href="">
+				<a
+					href="https://github.com/TrashP"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<img src={github} alt="Github icon"></img>
 				</a>
-				<a href="">
+				<a
+					href="https://www.linkedin.com/in/arnab-goswami-902566170/"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<img src={linkedin} alt="Linkedin icon"></img>
 				</a>
 			</span>
@@ -26,7 +35,7 @@ const Footer = () => {
 					<input type="email"></input>
 					<label>Message</label>
 					<textarea></textarea>
-					<button>Submit</button>
+					<button disabled={true}>Submit</button>
 				</form>
 			</span>
 		</div>
